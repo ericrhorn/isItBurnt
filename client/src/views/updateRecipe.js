@@ -65,7 +65,7 @@ const UpdateRecipe = (props) => {
     function removeHtmlTags(html) {
         const doc = new DOMParser().parseFromString(html, 'text/html');
         return doc.body.textContent || "";
-    },,,,,
+    }
 
 
     return (
