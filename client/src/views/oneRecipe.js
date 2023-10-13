@@ -33,11 +33,8 @@ const OneRecipe = (props) => {
         .catch((err) => console.log(err.data));
     }, [id]);
 
-<<<<<<< HEAD
 
     // functions to remove html tags from returned api text
-=======
->>>>>>> 2f7f19b872c96688f66aba54a359a2bfce5fe9cc
     const summary = recipe.recipeSummary
 
     const prettySummary = () => {
