@@ -61,7 +61,7 @@ const UpdateRecipe = (props) => {
             console.log(err)
         })
     }
-    // function to remove html tags from returned api
+    // function to remove html tags from returned api text
     function removeHtmlTags(html) {
         const doc = new DOMParser().parseFromString(html, 'text/html');
         return doc.body.textContent || "";
