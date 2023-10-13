@@ -17,4 +17,8 @@ module.exports.authenticate = (req, res, next) => {
       next();
     }
   });
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2f7f19b872c96688f66aba54a359a2bfce5fe9cc

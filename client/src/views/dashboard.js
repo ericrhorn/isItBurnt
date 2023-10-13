@@ -54,12 +54,15 @@ const Dashboard = (props) => {
     return (
         <Container>
             <h1 style={{marginBottom: 40}}>My Saved Recipes</h1>
+<<<<<<< HEAD
             {recipeList.length === 0
             ?
             <div style={{textAlign: "center"}}>
                 <h1>You have no saved recipies</h1>
             </div>
             :
+=======
+>>>>>>> 2f7f19b872c96688f66aba54a359a2bfce5fe9cc
             <Row>
                 {recipeList.map((recipe, idx) => (
                     <Col key={idx} md={4} style={{marginBottom: 30}}>
@@ -84,10 +87,16 @@ const Dashboard = (props) => {
                             </div>
                         </div>
                     </Card>
+<<<<<<< HEAD
                     </Col>
                     ))}
             </Row>
             }
+=======
+                    </Col>  
+                    ))}
+            </Row>
+>>>>>>> 2f7f19b872c96688f66aba54a359a2bfce5fe9cc
         </Container>
     )
 }

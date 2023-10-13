@@ -61,12 +61,15 @@ const UpdateRecipe = (props) => {
             console.log(err)
         })
     }
+<<<<<<< HEAD
     // function to remove html tags from returned api text
     function removeHtmlTags(html) {
         const doc = new DOMParser().parseFromString(html, 'text/html');
         return doc.body.textContent || "";
     }
 
+=======
+>>>>>>> 2f7f19b872c96688f66aba54a359a2bfce5fe9cc
 
     return (
         <Container style={{paddingBottom:50}}>
@@ -89,7 +92,11 @@ const UpdateRecipe = (props) => {
                     <Row>
                         <Form.Group style={{width:300}} className="mb-3" controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Recipe Name</Form.Label>
+<<<<<<< HEAD
                             <Form.Control name='recipeName' value={recipeName} onChange={(e) => setRecipeName(e.target.value)}/>
+=======
+                            <Form.Control name='recipeName' value={recipeName} onChange={(e) => setRecipeName(e.target.value)}/>                        
+>>>>>>> 2f7f19b872c96688f66aba54a359a2bfce5fe9cc
                         </Form.Group>
                     </Row>
                     <Row>
@@ -99,11 +106,19 @@ const UpdateRecipe = (props) => {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Summary</Form.Label>
+<<<<<<< HEAD
                             <Form.Control as="textarea" rows={5} name='recipeSummary' value={removeHtmlTags(recipeSummary)} onChange={(e) => setRecipeSummary(e.target.value)}/>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Instructions</Form.Label>
                             <Form.Control as="textarea" rows={3} name='recipeInstructions' value={removeHtmlTags(recipeInstructions)} onChange={(e) => setRecipeInstructions(e.target.value)}/>
+=======
+                            <Form.Control as="textarea" rows={5} name='recipeSummary' value={recipeSummary} onChange={(e) => setRecipeSummary(e.target.value)}/>
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Instructions</Form.Label>
+                            <Form.Control as="textarea" rows={3} name='recipeInstructions' value={recipeInstructions} onChange={(e) => setRecipeInstructions(e.target.value)}/>
+>>>>>>> 2f7f19b872c96688f66aba54a359a2bfce5fe9cc
                         </Form.Group>
                     </Row>
                     <button className="btn btn-primary mt-3" type='submit'>Save Recipe</button>
