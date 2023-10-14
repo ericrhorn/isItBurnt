@@ -27,7 +27,7 @@ const Dashboard = (props) => {
             setRecipeList(res.data);
         })
         .catch((err) => console.log(err.data));
-    }, []);
+    }, [userName]);
 
 
     // useEffect(() => {

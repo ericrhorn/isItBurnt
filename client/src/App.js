@@ -29,7 +29,7 @@ function App() {
       <div className='container' style={{marginTop: 100}}>
         <Routes>
           <Route path='/' element={<Main />} />
-          <Route path='/recipies' element={<Recipies />} />
+          <Route path='/recipies' element={<Recipies isLoggedin = {isLoggedin} setIsLoggedin = {setIsLoggedin} />} />
           <Route path='/meal_plan' element={<MealPlan />} />
           <Route path='/daily' element={<DailyMealPlan />} />
           <Route path='/weekly' element={<WeeklyMealPlan />} />

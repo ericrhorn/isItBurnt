@@ -4,11 +4,10 @@ import Col from 'react-bootstrap/Col';
 import SearchRes from '../views/searchRes';
 
 
-const RecipeList = ({recipe, props}) => {
+const RecipeList = ({recipe, props, isLoggedin, setIsLoggedin}) => {
 
 
     const [recipeInfo, setRecipeInfo] = useState({});
-    // const [recipeInfo, setRecipeInfo] = useState([]);
 
     useEffect (() => {
         axios.get(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=a204b3541d2f4c0da0e019afe998f3c6`)
@@ -22,7 +21,7 @@ const RecipeList = ({recipe, props}) => {
     return (
         <>
         <Col md={6}>
-            <SearchRes recipe={recipe} recipeInfo={recipeInfo}/>
+            <SearchRes recipe={recipe} recipeInfo={recipeInfo} isLoggedin = {isLoggedin} setIsLoggedin = {setIsLoggedin}/>
         </Col>
         </>
     )

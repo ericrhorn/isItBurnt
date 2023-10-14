@@ -8,7 +8,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-const SearchRes = ({recipe, recipeInfo, value}) => {
+const SearchRes = ({recipe, recipeInfo, value, isLoggedin}) => {
+
+    const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/user/current-user', {withCredentials: true})
+    .then((res)=>{
+        console.log(res.data);
+        setUser(res.data);
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+  },[isLoggedin]);
+
 
     const [recipeName, setRecipeName] = useState(value)
     useEffect(()=> setRecipeName(recipeInfo.title), [recipeInfo.title])
@@ -74,7 +88,8 @@ const SearchRes = ({recipe, recipeInfo, value}) => {
                         <textarea type="textarea" name='recipeInstructions' value={recipeInstructions} onChange={(e) => setRecipeInstructions(e.target.value)} />
                         <input type="text" name='recipeComments' value={recipeComments} onChange={(e) => setRecipeComments(e.target.value)} />
                     </div>
-                    <button className="btn btn-primary mt-3" type='submit'>Save Recipe</button>
+                    <button className="btn btn-primary mt-3" type='submit'>
+                        {user ? 'Save Recipe'  : 'Log in to Save'}</button>
                 </form>
             </Card.Body>
         </Card>

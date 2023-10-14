@@ -9,7 +9,9 @@ import RecipeList from '../components/recipieList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const Recipie = (props) => {
+const Recipie = (props, isLoggedin, setIsLoggedin) => {
+
+    // const {isLoggedin, setIsLoggedin} = props;
 
 
     const cuisineOptions = [
@@ -105,7 +107,7 @@ const getMealData = (e) => {
                 <Col lg={9} style={{marginBottom:50}}>
                     <Row className="g-4">
                         {recipeData.map((recipe) => (
-                            <RecipeList key={recipe.id} recipe={recipe}/>
+                            <RecipeList key={recipe.id} recipe={recipe} isLoggedin = {isLoggedin} setIsLoggedin = {setIsLoggedin}/>
                         ))}
                     </Row>
                 </Col>

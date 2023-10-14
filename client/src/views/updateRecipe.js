@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 
 
@@ -21,7 +21,7 @@ const UpdateRecipe = (props) => {
 
     const {id} = useParams();
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
 
     useEffect(() => {
